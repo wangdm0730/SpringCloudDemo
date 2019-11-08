@@ -1,0 +1,17 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: microservice-config-server-eureka
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wangdm0730/config-repo.git
+          search-paths: config-repo
+          username: wangdm0730
+          password: Wdm.13579.
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer0:8760/eureka/,http://peer1:8761/eureka/,http://peer2:8762/eureka/    # 指定注册中心的地址
